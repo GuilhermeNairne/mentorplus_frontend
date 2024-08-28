@@ -2,7 +2,9 @@ import { ChakraProvider, Flex } from '@chakra-ui/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import myTheme from './mytheme';
 import { Home } from './home';
-import { Login } from './login';
+import { Login } from './login/login';
+import { RedefinirSenha } from './login/redefinirSenha';
+import { RedefinirSenhaEmail } from './login/redefinirSenhaEmail';
 
 function App() {
   const queryClient = new QueryClient();
@@ -10,7 +12,7 @@ function App() {
     <ChakraProvider theme={myTheme} cssVarsRoot={'theme'}>
       <QueryClientProvider client={queryClient}>
       <Flex direction="column" w="100%" h="100vh">
-        <Login />
+        <Home />
       </Flex>
       </QueryClientProvider>
     </ChakraProvider>
